@@ -1,42 +1,42 @@
 exports.getRandomRevenueData = () => {
     const randomData = [
         {
-            name: "Mahindra",
+            name: "NovaCorp Alpha",
             totalRevenue: Math.floor(Math.random() * 10000),
             loss: Math.floor(Math.random() * 10000)
         },
         {
-            name: "Reliance",
+            name: "NovaCorp Beta",
             totalRevenue: Math.floor(Math.random() * 10000),
             loss: Math.floor(Math.random() * 10000)
         },
         {
-            name: "Infosys",
+            name: "NovaCorp Gamma",
             totalRevenue: Math.floor(Math.random() * 10000),
             loss: Math.floor(Math.random() * 10000)
         },
         {
-            name: "Tata",
+            name: "NovaCorp Delta",
             totalRevenue: Math.floor(Math.random() * 10000),
             loss: Math.floor(Math.random() * 10000)
         },
         {
-            name: "HDFC",
+            name: "NovaCorp Sigma",
             totalRevenue: Math.floor(Math.random() * 10000),
             loss: Math.floor(Math.random() * 10000)
         },
         {
-            name: "Zomato",
+            name: "NovaCorp Orion",
             totalRevenue: Math.floor(Math.random() * 10000),
             loss: Math.floor(Math.random() * 10000)
         },
         {
-            name: "Sun Pharma",
+            name: "NovaCorp Titan",
             totalRevenue: Math.floor(Math.random() * 10000),
             loss: Math.floor(Math.random() * 10000)
         },
         {
-            name: "Samsung",
+            name: "NovaCorp Zenith",
             totalRevenue: Math.floor(Math.random() * 10000),
             loss: Math.floor(Math.random() * 10000)
         }
