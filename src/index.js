@@ -7,18 +7,20 @@ const http = require('http')
 const { CronJob } = require('cron');
 const { getRandomRevenueData } = require('./utils/api');
 
-
-
 const app = express()
 
 app.use(cors())
 
 const server = http.createServer(app)
 
+const allowedOrigins = [
+    process.env.FRONTEND_URL,
+    "http://localhost:3000"
+]
+
 const io = new Server(server, {
     cors: {
-        // origin: process.env.FRONTEND_URL,
-        origin: "http://localhost:3000" //temporary
+        origin: allowedOrigins
     },
     transports: ["websocket", "polling"],
 });
