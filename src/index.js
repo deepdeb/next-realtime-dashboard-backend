@@ -1,4 +1,4 @@
-const express = require ('express')
+const express = require('express')
 const { Server } = require('socket.io')
 const cors = require('cors')
 require('dotenv').config();
@@ -17,13 +17,14 @@ const server = http.createServer(app)
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: process.env.FRONTEND_URL,
     },
     transports: ["websocket", "polling"],
 });
 
 io.on("connection", (socket) => {
-    const job = new CronJob("*/5 * * * * *", async() => {
+    socket.emit("time", [])
+    const job = new CronJob("*/5 * * * * *", async () => {
         const data = await getRandomRevenueData();
         socket.emit("time", data)
     })
